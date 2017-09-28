@@ -6,7 +6,7 @@ set shiftwidth=2 tabstop=2 noexpandtab
 set autoindent copyindent
 "Show tabs
 set list
-set listchars=tab:\|\
+set listchars=tab:\|\ 
 
 "case insensative search
 set ignorecase
