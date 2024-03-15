@@ -3,7 +3,7 @@ set nocompatible
 
 "indentation settings
 set shiftwidth=2 tabstop=2 noexpandtab
-set autoindent copyindent
+set autoindent copyindent preserveindent
 "Show tabs
 set list
 set listchars=tab:\|\ 
@@ -16,10 +16,11 @@ set smartcase
 set ruler
 
 "Indent line wraps (requires vim 8.0)
-"set breakindent
+set breakindent
 
 "turn on mouse
 set mouse=a
+set ttymouse=sgr
 
 "Template shortcut function: LT <template name> (ex ':LT main.py')
 :command! -nargs=1 LT :r ~/.vim/templates/<args>
@@ -34,9 +35,6 @@ set background=dark
 "Persistent macro for push diff and move to next
 let @q = 'dp]c'
 
-"Putty compatibility
-set ttymouse=xterm
-set backspace=indent,eol,start
 "Ctrl Backspace in insert mode
 set backspace=indent,eol,start
 noremap! <C-BS> <C-w>
@@ -47,3 +45,11 @@ map! <esc>[1;5D <C-Left>
 map! <esc>[1;5C <C-Right>
 map <esc>[1;5D <C-Left>
 map <esc>[1;5C <C-Right>
+
+"plugins
+"call plug#begin()
+"Plug 'zivyangll/git-blame.vim'
+"call plug#end()
+
+"git blame binding
+"nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
